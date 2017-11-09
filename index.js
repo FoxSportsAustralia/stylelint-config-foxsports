@@ -13,7 +13,7 @@ module.exports = {
     ],
     "rules": Object.assign(
         {
-            "csstree/validator": {"ignore": ["background", "background-color"]}, // gets upset by sass rgba() function
+            'csstree/validator': {ignore: ['background', 'background-color', 'box-shadow']}, // gets upset by sass rgba() function
             "plugin/declaration-block-no-ignored-properties": true,
             "scale-unlimited/declaration-strict-value": [["/color/", "z-index", "font-size", "line-height"], { ignoreKeywords: ["currentColor", "transparent", "inherit"] }],
             "plugin/selector-bem-pattern": {
