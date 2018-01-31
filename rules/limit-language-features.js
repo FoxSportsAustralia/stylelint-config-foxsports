@@ -49,13 +49,13 @@ module.exports = {
     'selector-class-pattern': null, // Specify a pattern for class selectors.
     'selector-id-pattern': null, // Specify a pattern for id selectors.
     'selector-max-attribute': 2, // Limit the number of attribute selectors in a selector.
-    'selector-max-class': 3, // Limit the number of classes in a selector.
+    'selector-max-class': null, // Limit the number of classes in a selector. (covered by selector-max-specificity)
     'selector-max-combinators': 2, // Limit the number of combinators in a selector.
     'selector-max-compound-selectors': 3, // Limit the number of compound selectors in a selector.
     'selector-max-empty-lines': 0, // Limit the number of adjacent empty lines within selectors.
-    'selector-max-id': 1, // Limit the number of id selectors in a selector.
-    'selector-max-specificity': ["0,4,2", {ignoreSelectors: ['.fsui-normalise', '.fiso-widget']}], // Limit the specificity of selectors.
-    'selector-max-type': 2, // Limit the number of type in a selector.
+    'selector-max-id': null, // Limit the number of id selectors in a selector. (covered by selector-max-specificity)
+    'selector-max-specificity': ["1,3,2", {ignoreSelectors: ['.fsui-normalise', '.fiso-widget']}], // Limit the specificity of selectors.
+    'selector-max-type': null, // Limit the number of type in a selector. (covered by selector-max-specificity)
     'selector-max-universal': 1, // Limit the number of universal selectors in a selector.
     'selector-nested-pattern': null, // Specify a pattern for the selectors of rules nested within rules.
     'selector-no-qualifying-type': [true, { ignore: ["attribute"] }], // Disallow qualifying a selector by type.
