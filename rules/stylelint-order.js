@@ -1,12 +1,11 @@
+'use strict';
+
+// Export the Stylelint configuration
 module.exports = {
-    // ...
-    "order/order": [
-        "custom-properties",
-        {
-            type: 'at-rule',
-            name: 'include'
-        },
-        "declarations",
+    'order/order': [
+        'custom-properties',
+        { type: 'at-rule', name: 'include' },
+        'declarations',
         {
             type: 'rule',
             selector: / &/
@@ -19,246 +18,284 @@ module.exports = {
             type: 'at-rule',
             name: 'media'
         },
-        "rules"
+        'rules'
     ],
-    "order/properties-order": [ // Concentric CSS order taken from https://github.com/brandon-rhodes/Concentric-CSS
-          /* box-sizing */
-          /* [content-box|border-box|inherit|initial|unset]*/
-          'box-sizing',
+    'order/properties-order': [ // Concentric CSS order taken from https://github.com/brandon-rhodes/Concentric-CSS
+        /* browser default styles */
+        'all',
+        'appearance',
 
-          /* position */
-          'display',
-          'position',
-          'top',
-          'right',
-          'bottom',
-          'left',
+        /* box model */
+        'box-sizing',
 
-          'float',
-          'clear',
+        /* position */
+        'display',
+        'position',
+        'top',
+        'right',
+        'bottom',
+        'left',
 
-          /* align-content */
-          'align-content',
-          'align-items',
-          'align-self',
+        'float',
+        'clear',
 
-          /* flex  */
-          'flex',
-          'flex-basis',
-          'flex-direction',
-          'flex-flow',
-          'flex-grow',
-          'flex-shrink',
-          'flex-wrap',
-          'justify-content',
+        /* flex */
+        'flex',
+        'flex-basis',
+        'flex-direction',
+        'flex-flow',
+        'flex-grow',
+        'flex-shrink',
+        'flex-wrap',
 
-          /* order */
-          'order',
+        /* grid */
+        'grid',
+        'grid-area',
+        'grid-template',
+        'grid-template-areas',
+        'grid-template-rows',
+        'grid-template-columns',
+        'grid-row',
+        'grid-row-start',
+        'grid-row-end',
+        'grid-column',
+        'grid-column-start',
+        'grid-column-end',
+        'grid-auto-rows',
+        'grid-auto-columns',
+        'grid-auto-flow',
+        'grid-gap',
+        'grid-row-gap',
+        'grid-column-gap',
 
-          /* columns */
-          'columns',
-          'column-gap',
-          'column-fill',
-          'column-rule',
-          'column-rule-width',
-          'column-rule-style',
-          'column-rule-color',
-          'column-span',
-          'column-count',
-          'column-width',
+        /* flex align */
+        'align-content',
+        'align-items',
+        'align-self',
 
-          /* transform */
-          'backface-visibility',
-          'perspective',
-          'perspective-origin',
-          'transform',
-          'transform-origin',
-          'transform-style',
+        /* flex justify */
+        'justify-content',
+        'justify-items',
+        'justify-self',
 
-          /* tranistions */
-          'transition',
-          'transition-delay',
-          'transition-duration',
-          'transition-property',
-          'transition-timing-function',
+        /* order */
+        'order',
 
-          /* visibility */
-          'visibility',
-          'opacity',
-          'z-index',
+        /* columns */
+        'columns',
+        'column-gap',
+        'column-fill',
+        'column-rule',
+        'column-rule-width',
+        'column-rule-style',
+        'column-rule-color',
+        'column-span',
+        'column-count',
+        'column-width',
 
-          /* margin */
-          'margin',
-          'margin-top',
-          'margin-right',
-          'margin-bottom',
-          'margin-left',
+        /* transform */
+        'backface-visibility',
+        'perspective',
+        'perspective-origin',
+        'transform',
+        'transform-origin',
+        'transform-style',
 
-          /* outline */
-          'outline',
-          'outline-offset',
-          'outline-width',
-          'outline-style',
-          'outline-color',
+        /* transitions */
+        'transition',
+        'transition-delay',
+        'transition-duration',
+        'transition-property',
+        'transition-timing-function',
 
-          /* border */
-          'border',
-          'border-top',
-          'border-right',
-          'border-bottom',
-          'border-left',
-          'border-width',
-          'border-top-width',
-          'border-right-width',
-          'border-bottom-width',
-          'border-left-width',
+        /* visibility */
+        'visibility',
+        'opacity',
+        'mix-blend-mode',
+        'isolation',
+        'z-index',
 
-          /* border-style */
-          'border-style',
-          'border-top-style',
-          'border-right-style',
-          'border-bottom-style',
-          'border-left-style',
+        /* margin */
+        'margin',
+        'margin-top',
+        'margin-right',
+        'margin-bottom',
+        'margin-left',
 
-          /* border-radius */
-          'border-radius',
-          'border-top-left-radius',
-          'border-top-right-radius',
-          'border-bottom-left-radius',
-          'border-bottom-right-radius',
+        /* outline */
+        'outline',
+        'outline-offset',
+        'outline-width',
+        'outline-style',
+        'outline-color',
 
-          /* border-color */
-          'border-color',
-          'border-top-color',
-          'border-right-color',
-          'border-bottom-color',
-          'border-left-color',
+        /* border */
+        'border',
+        'border-top',
+        'border-right',
+        'border-bottom',
+        'border-left',
+        'border-width',
+        'border-top-width',
+        'border-right-width',
+        'border-bottom-width',
+        'border-left-width',
 
-          /* border-image */
-          'border-image',
-          'border-image-source',
-          'border-image-width',
-          'border-image-outset',
-          'border-image-repeat',
-          'border-image-slice',
+        /* border-style */
+        'border-style',
+        'border-top-style',
+        'border-right-style',
+        'border-bottom-style',
+        'border-left-style',
 
-          /* box-shadow */
-          'box-shadow',
+        /* border-radius */
+        'border-radius',
+        'border-top-left-radius',
+        'border-top-right-radius',
+        'border-bottom-left-radius',
+        'border-bottom-right-radius',
 
-          /* background */
-          'background',
-          'background-attachment',
-          'background-clip',
-          'background-color',
-          'background-image',
-          'background-origin',
-          'background-position',
-          'background-repeat',
-          'background-size',
+        /* border-color */
+        'border-color',
+        'border-top-color',
+        'border-right-color',
+        'border-bottom-color',
+        'border-left-color',
 
-          /* cursor */
-          'cursor',
+        /* border-image */
+        'border-image',
+        'border-image-source',
+        'border-image-width',
+        'border-image-outset',
+        'border-image-repeat',
+        'border-image-slice',
 
-          /* padding */
-          'padding',
-          'padding-top',
-          'padding-right',
-          'padding-bottom',
-          'padding-left',
+        /* box-shadow */
+        'box-shadow',
 
-          /* width */
-          'width',
-          'min-width',
-          'max-width',
+        /* background */
+        'background',
+        'background-attachment',
+        'background-clip',
+        'background-color',
+        'background-image',
+        'background-origin',
+        'background-position',
+        'background-repeat',
+        'background-size',
+        'background-blend-mode',
 
-          /* height */
-          'height',
-          'min-height',
-          'max-height',
+        /* cursor */
+        'cursor',
 
-          /* overflow */
-          'overflow',
-          'overflow-x',
-          'overflow-y',
-          'resize',
+        /* padding */
+        'padding',
+        'padding-top',
+        'padding-right',
+        'padding-bottom',
+        'padding-left',
 
-          /* list-style */
-          'list-style',
-          'list-style-type',
-          'list-style-position',
-          'list-style-image',
-          'caption-side',
+        /* width */
+        'width',
+        'min-width',
+        'max-width',
 
-          /* tables */
-          'table-layout',
-          'border-collapse',
-          'border-spacing',
-          'empty-cells',
+        /* height */
+        'height',
+        'min-height',
+        'max-height',
 
-          /* animation */
-          /* animation-[[name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode] [play-state]]*/
-          'animation',
-          'animation-name',
-          'animation-duration',
-          'animation-timing-function',
-          'animation-delay',
-          'animation-iteration-count',
-          'animation-direction',
-          'animation-fill-mode',
-          'animation-play-state',
+        /* overflow */
+        'overflow',
+        'overflow-x',
+        'overflow-y',
+        'resize',
 
-          /* vertical-aligment */
-          'vertical-align',
+        /* list-style */
+        'list-style',
+        'list-style-type',
+        'list-style-position',
+        'list-style-image',
+        'caption-side',
 
-          /* text-alignment & decoration */
-          'direction',
-          'tab-size',
-          'text-align',
-          'text-align-last',
-          'text-justify',
-          'text-indent',
-          'text-transform',
-          'text-decoration',
-          'text-decoration-color',
-          'text-decoration-line',
-          'text-decoration-style',
-          'text-rendering',
-          'text-shadow',
-          'text-overflow',
+        /* tables */
+        'table-layout',
+        'border-collapse',
+        'border-spacing',
+        'empty-cells',
 
-          /* text-spacing */
-          'line-height',
-          'word-spacing',
-          'letter-spacing',
-          'white-space',
-          'word-break',
-          'word-wrap',
-          'color',
+        /* animation */
+        /* animation-[[name] [duration] [timing-function] [delay] [iteration-count] [direction] [fill-mode] [play-state]]*/
+        'animation',
+        'animation-name',
+        'animation-duration',
+        'animation-timing-function',
+        'animation-delay',
+        'animation-iteration-count',
+        'animation-direction',
+        'animation-fill-mode',
+        'animation-play-state',
 
-          /* font */
-          'font',
-          'font-family',
-          'font-size',
-          'font-size-adjust',
-          'font-stretch',
-          'font-weight',
-          'font-smoothing',
-          'osx-font-smoothing',
-          'font-variant',
-          'font-style',
+        /* vertical-alignment */
+        'vertical-align',
 
-          /* content */
-          'content',
-          'quotes',
+        /* text-alignment & decoration */
+        'direction',
+        'tab-size',
+        'text-align',
+        'text-align-last',
+        'text-justify',
+        'text-indent',
+        'text-transform',
+        'text-decoration',
+        'text-decoration-color',
+        'text-decoration-line',
+        'text-decoration-style',
+        'text-rendering',
+        'text-shadow',
+        'text-overflow',
 
-          /* counters */
-          'counter-reset',
-          'counter-increment',
+        /* text-spacing */
+        'line-height',
+        'word-spacing',
+        'letter-spacing',
+        'white-space',
+        'word-break',
+        'word-wrap',
+        'color',
 
-          /* breaks */
-          'page-break-before',
-          'page-break-after',
-          'page-break-inside'
+        /* font */
+        'font',
+        'font-family',
+        'font-kerning',
+        'font-size',
+        'font-size-adjust',
+        'font-stretch',
+        'font-weight',
+        'font-smoothing',
+        'osx-font-smoothing',
+        'font-variant',
+        'font-style',
+
+        /* content */
+        'content',
+        'quotes',
+
+        /* counters */
+        'counter-reset',
+        'counter-increment',
+
+        /* breaks */
+        'page-break-before',
+        'page-break-after',
+        'page-break-inside',
+
+        /* mouse */
+        'pointer-events',
+
+        /* intent */
+        /* provides a way for authors to hint browsers about the kind of changes to be expected on an element, so that the browser can set up appropriate optimizations ahead of time before the element is actually changed. These kind of optimizations can increase the responsiveness of a page by doing potentially expensive work ahead of time before they are actually required. */
+        'will-change'
     ],
-    "order/properties-alphabetical-order": null
+    'order/properties-alphabetical-order': null
 }

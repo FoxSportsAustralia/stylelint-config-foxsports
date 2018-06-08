@@ -37,7 +37,7 @@ module.exports = {
     'unit-case': 'lower', // Specify lowercase or uppercase for units.
 
     // Value
-    'value-keyword-case': 'lower', // Specify lowercase or uppercase for keywords values.
+    'value-keyword-case': ['lower', {ignoreKeywords: ['dummyValue']}], // Allow dummyValue
 
     // Value list
     'value-list-comma-newline-after': null, // Require a newline or disallow whitespace after the commas of value lists.
@@ -99,7 +99,7 @@ module.exports = {
     'selector-list-comma-space-before': null, // Require a single space or disallow whitespace before the commas of selector lists.
 
     // Rule
-    'rule-empty-line-before': ["always", {except: ["first-nested"]}], // Require or disallow an empty line before rules (Autofixable).
+    'rule-empty-line-before': ['always', {except: ['first-nested'], ignore: ['after-comment']}], // Require or disallow an empty line before rules (Autofixable).
 
     // Media feature
     'media-feature-colon-space-after': "always", // Require a single space or disallow whitespace after the colon in media features.

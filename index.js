@@ -13,9 +13,20 @@ module.exports = {
     ],
     "rules": Object.assign(
         {
-            'csstree/validator': {ignore: ['background', 'background-color', 'box-shadow']}, // gets upset by sass rgba() function
+            'csstree/validator': {
+                ignore: Array.from({length: 10}, (_, i) => `-styled-mixin${i}`), // these psuedo identifiers are used by styled components for interpolated CSS generated at runtime
+            },
             "plugin/declaration-block-no-ignored-properties": true,
-            "scale-unlimited/declaration-strict-value": [["/color/", "z-index", "font-size", "line-height"], { ignoreKeywords: ["currentColor", "transparent", "inherit"] }],
+            'scale-unlimited/declaration-strict-value': [ // Disallow named colours
+                ['/color/', 'z-index'],
+                {
+                    ignoreKeywords: {
+                        '': ['inherit', 'initial', 'unset'],
+                        '/color/': ['currentColor', 'transparent'],
+                        'z-index': ['0', 'auto']
+                    },
+                }
+            ],
             "plugin/selector-bem-pattern": {
                 "componentName": "/^[-_a-z0-9]+$/",
                 "componentSelectors": {
