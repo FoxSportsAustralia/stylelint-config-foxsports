@@ -1,5 +1,11 @@
 'use strict'
 
+// I asked for confirmation:
+// https://github.com/AndyOGo/stylelint-declaration-strict-value/issues/24
+// Apparently, that’s not how default works. Once you explicitly set, it doesn’t take from default list.
+// So if we want our explicit definitions to extend the default, we do this:
+const strictValueDefaults = ['inherit', 'initial', 'unset'];
+
 // See https://stylelint.io/user-guide/example-config/
 module.exports = {
     "syntax": "scss",
@@ -21,10 +27,11 @@ module.exports = {
                 ['/color/', 'z-index'],
                 {
                     ignoreKeywords: {
-                        '': ['inherit', 'initial', 'unset'],
-                        '/color/': ['currentColor', 'transparent'],
-                        'z-index': ['0', 'auto']
-                    },
+                        '': strictValueDefaults, // only not-explicitly set properties
+                        '/color/': ['currentColor', 'transparent'].concat(strictValueDefaults),
+                        'z-index': ['0', 'auto'].concat(strictValueDefaults),
+
+                    }
                 }
             ],
             "plugin/selector-bem-pattern": {
