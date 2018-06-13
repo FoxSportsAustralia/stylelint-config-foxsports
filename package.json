@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-foxsports",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "sharable stylelint config",
   "main": "index.js",
   "scripts": {
