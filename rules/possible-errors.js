@@ -6,6 +6,7 @@ module.exports = {
 
     // Font family
     'font-family-no-duplicate-names': true, // Disallow duplicate font family names.
+    'font-family-no-missing-generic-family-keyword': true, // Disallow missing generic families in lists of font family names
 
     // Function
     'function-calc-no-unspaced-operator': true, // Disallow an unspaced operator within calc functions.
@@ -50,6 +51,7 @@ module.exports = {
 
     // General / Sheet
     'no-descending-specificity': true, // Disallow selectors of lower specificity from coming after overriding selectors of higher specificity.
+    'no-duplicate-at-import-rules': true, // Disallow duplicate @import rules within a stylesheet (not that styled-components is affected)
     'no-duplicate-selectors': true, // Disallow duplicate selectors.
     'no-empty-source': true, // Disallow empty sources.
     'no-extra-semicolons': true, // Disallow extra semicolons.

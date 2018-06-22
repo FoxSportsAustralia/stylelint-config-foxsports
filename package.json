@@ -22,7 +22,7 @@
     "fs-default-project-config": "^6.1.2"
   },
   "peerDependencies": {
-    "stylelint": "^8.2.0"
+    "stylelint": "^9.3.0"
   },
   "dependencies": {
     "stylelint-csstree-validator": "^1.3.0",

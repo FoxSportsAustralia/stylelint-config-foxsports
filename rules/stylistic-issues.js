@@ -24,7 +24,7 @@ module.exports = {
     'function-whitespace-after': 'always', // Require or disallow whitespace after functions.
 
     // Number
-    'number-leading-zero': 'never', // Require or disallow a leading zero for fractional numbers less than 1.
+    'number-leading-zero': 'always', // Require or disallow a leading zero for fractional numbers less than 1.
     'number-no-trailing-zeros': true, // Disallow trailing zeros in numbers.
 
     // String
