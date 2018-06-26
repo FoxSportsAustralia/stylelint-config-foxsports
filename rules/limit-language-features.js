@@ -12,6 +12,9 @@ module.exports = {
     'function-url-scheme-whitelist': null, // Specify a whitelist of allowed url schemes.
     'function-whitelist': null, // Specify a whitelist of allowed functions.
 
+    // animations/keyframes
+    'keyframes-name-pattern': null, // Specify a pattern for keyframe names.
+
     // Number
     'number-max-precision': 2, // Limit the number of decimal places allowed in numbers.
 
@@ -47,6 +50,8 @@ module.exports = {
     'selector-attribute-operator-blacklist': null, // Specify a blacklist of disallowed attribute operators.
     'selector-attribute-operator-whitelist': null, // Specify a whitelist of allowed attribute operators.
     'selector-class-pattern': null, // Specify a pattern for class selectors.
+    'selector-combinator-blacklist': null, // Specify a blacklist of disallowed combinators
+    'selector-combinator-whitelist': null, // Specify a whitelist of allowed combinators
     'selector-id-pattern': null, // Specify a pattern for id selectors.
     'selector-max-attribute': 2, // Limit the number of attribute selectors in a selector.
     'selector-max-class': null, // Limit the number of classes in a selector. (covered by selector-max-specificity)
@@ -54,6 +59,7 @@ module.exports = {
     'selector-max-compound-selectors': 3, // Limit the number of compound selectors in a selector.
     'selector-max-empty-lines': 0, // Limit the number of adjacent empty lines within selectors.
     'selector-max-id': null, // Limit the number of id selectors in a selector. (covered by selector-max-specificity)
+    'selector-max-pseudo-class': null, // Limit the number of pseudo-classes in a selector
     'selector-max-specificity': ["1,3,2", {ignoreSelectors: ['.fsui-normalise', '.fiso-widget']}], // Limit the specificity of selectors.
     'selector-max-type': null, // Limit the number of type in a selector. (covered by selector-max-specificity)
     'selector-max-universal': 1, // Limit the number of universal selectors in a selector.
@@ -62,10 +68,13 @@ module.exports = {
     'selector-no-vendor-prefix': true, // Disallow vendor prefixes for selectors.
     'selector-pseudo-class-blacklist': null, // Specify a blacklist of disallowed pseudo-class selectors.
     'selector-pseudo-class-whitelist': null, // Specify a whitelist of allowed pseudo-class selectors.
+    'selector-pseudo-element-blacklist': null, // Specify a blacklist of disallowed pseudo-element selectors
+    'selector-pseudo-element-whitelist': null, // Specify a whitelist of allowed pseudo-element selectors
 
     // Media feature
     'media-feature-name-blacklist': null, // Specify a blacklist of disallowed media feature names.
     'media-feature-name-no-vendor-prefix': true, // Disallow vendor prefixes for media feature names.
+    'media-feature-name-value-whitelist': null, // Specify a whitelist of allowed media feature name and value pairs.
     'media-feature-name-whitelist': null, // Specify a whitelist of allowed media feature names.
 
     // Custom media
