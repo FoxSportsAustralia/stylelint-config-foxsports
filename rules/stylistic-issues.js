@@ -131,6 +131,7 @@ module.exports = {
     'indentation': [4], // Specify indentation (Autofixable).
     'max-empty-lines': [1, { ignore: ["comments"] }], // Limit the number of adjacent empty lines.
     'max-line-length': null, // Limit the length of a line.
+    'no-empty-first-line': true, // Disallow empty first lines.
     'no-eol-whitespace': true, // Disallow end-of-line whitespace.
     'no-missing-end-of-source-newline': true, // Disallow missing end-of-source newlines (Autofixable).
 }

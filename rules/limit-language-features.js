@@ -83,11 +83,13 @@ module.exports = {
     // At-rule
     'at-rule-blacklist': null, // Specify a blacklist of disallowed at-rules.
     'at-rule-no-vendor-prefix': true, // Disallow vendor prefixes for at-rules.
+    'at-rule-property-requirelist': {}, // Specify a requirelist of properties for an at-rule.
     'at-rule-whitelist': null, // Specify a whitelist of allowed at-rules.
 
     // Comment
     'comment-word-blacklist': ["/^TODO/", { "severity": "warning" }], // Specify a blacklist of disallowed words within comments.
 
     // General / Sheet
-    'max-nesting-depth': 3, // Limit the depth of nesting.
+    'linebreaks': null, // Specify unix or windows linebreaks.
+    'max-nesting-depth': [2, {ignore: ['blockless-at-rules', 'pseudo-classes']}], // Limit the depth of nesting.
 }
