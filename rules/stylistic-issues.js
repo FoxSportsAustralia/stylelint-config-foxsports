@@ -65,7 +65,7 @@ module.exports = {
     'declaration-block-semicolon-newline-before': null, // Require a newline or disallow whitespace before the semicolons of declaration blocks.
     'declaration-block-semicolon-space-after': null, // Require a single space or disallow whitespace after the semicolons of declaration blocks.
     'declaration-block-semicolon-space-before': "never", // Require a single space or disallow whitespace before the semicolons of declaration blocks.
-    'declaration-block-trailing-semicolon': "always", // Require or disallow a trailing semicolon within declaration blocks.
+    'declaration-block-trailing-semicolon': ["always", {except: 'single-declaration'}], // Require or disallow a trailing semicolon within declaration blocks.
 
     // Block
     'block-closing-brace-empty-line-before': "never", // Require or disallow an empty line before the closing brace of blocks.
@@ -76,7 +76,7 @@ module.exports = {
     'block-opening-brace-newline-after': "always-multi-line", // Require a newline after the opening brace of blocks.
     'block-opening-brace-newline-before': null, // Require a newline or disallow whitespace before the opening brace of blocks.
     'block-opening-brace-space-after': "always-single-line", // Require a single space or disallow whitespace after the opening brace of blocks.
-    'block-opening-brace-space-before': "always", // Require a single space or disallow whitespace before the opening brace of blocks.
+    'block-opening-brace-space-before': ["always", {ignoreSelectors: ['[0-9+%']}], // Require a single space or disallow whitespace before the opening brace of blocks.
 
     // Selector
     'selector-attribute-brackets-space-inside': "never", // Require a single space or disallow whitespace on the inside of the brackets within attribute selectors.
@@ -85,7 +85,7 @@ module.exports = {
     'selector-attribute-quotes': "always", // Require or disallow quotes for attribute values.
     'selector-combinator-space-after': "always", // Require a single space or disallow whitespace after the combinators of selectors.
     'selector-combinator-space-before': "always", // Require a single space or disallow whitespace before the combinators of selectors.
-    'selector-descendant-combinator-no-non-space': true, // Disallow non-space characters for descendant combinators of selectors.
+    'selector-descendant-combinator-no-non-space': true, // Disallow non-space characters for descendant combinators of selectors. This rule currently ignores selectors containing comments.
     'selector-pseudo-class-case': "lower", // Specify lowercase or uppercase for pseudo-class selectors.
     'selector-pseudo-class-parentheses-space-inside': "never", // Require a single space or disallow whitespace on the inside of the parentheses within pseudo-class selectors.
     'selector-pseudo-element-case': "lower", // Specify lowercase or uppercase for pseudo-element selectors.
@@ -97,6 +97,7 @@ module.exports = {
     'selector-list-comma-newline-before': null, // Require a newline or disallow whitespace before the commas of selector lists.
     'selector-list-comma-space-after': null, // Require a single space or disallow whitespace after the commas of selector lists.
     'selector-list-comma-space-before': null, // Require a single space or disallow whitespace before the commas of selector lists.
+    'selector-disallowed-list': null, // specify a list of disallowed selectors
 
     // Rule
     'rule-empty-line-before': ['always', {except: ['first-nested'], ignore: ['after-comment']}], // Require or disallow an empty line before rules (Autofixable).
@@ -134,4 +135,6 @@ module.exports = {
     'no-empty-first-line': true, // Disallow empty first lines.
     'no-eol-whitespace': true, // Disallow end-of-line whitespace.
     'no-missing-end-of-source-newline': true, // Disallow missing end-of-source newlines (Autofixable).
+    'no-irregular-whitespace': true, // Disallow irregular whitespaces.
+    'no-invalid-position-at-import-rule': true, // Disallow invalid position @import rules within styleshit
 }
