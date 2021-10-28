@@ -6,14 +6,9 @@ module.exports = {
 
     // Font family
     'font-family-no-duplicate-names': true, // Disallow duplicate font family names.
-    'font-family-no-missing-generic-family-keyword': [true, {ignoreFontFamilies: [
-        "icons",
-        "FontAwesome",
-        // "var(--font)", // the rule should ignore values that contain variables
-    ]}], // Disallow missing generic families in lists of font family names
+    'font-family-no-missing-generic-family-keyword': true, // Disallow missing generic families in lists of font family names
 
     // Function
-    'function-calc-no-invalid': true, // Disallow an invalid expression within calc functions.
     'function-calc-no-unspaced-operator': true, // Disallow an unspaced operator within calc functions.
     'function-linear-gradient-no-nonstandard-direction': true, // Disallow direction values in linear-gradient() calls that are not valid according to the standard syntax.
 

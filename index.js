@@ -8,7 +8,7 @@ const strictValueDefaults = ['inherit', 'initial', 'unset'];
 
 // See https://stylelint.io/user-guide/example-config/
 module.exports = {
-    "syntax": "scss",
+    "customSyntax": "scss",
     "plugins": [
       "stylelint-csstree-validator",
       "stylelint-declaration-block-no-ignored-properties",
@@ -46,5 +46,18 @@ module.exports = {
         require('./rules/limit-language-features.js'),
         require('./rules/possible-errors.js'),
         require('./rules/stylistic-issues.js')
-    )
+    ),
+    "reportDescriptionlessDisables": true,
+    "reportNeedlessDisables": true,
+    "reportInvalidScopeDisables": true,
+    "ignoreDisables": false,
+    "ignoreFiles": [],
+    "overrides": [
+        {
+            "files": ["docs/assets/*.css"],
+            "rules": {
+                'color-no-hex': false, // Disallow hex colors.
+            }
+        }
+    ]
 }

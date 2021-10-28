@@ -4,6 +4,7 @@ module.exports = {
     // Color
     'color-named': "never", // Require (where possible) or disallow named colors.
     'color-no-hex': null, // Disallow hex colors.
+    'color-function-notation': "legacy", // Specify modern or legacy notation for applicable color-functions.
 
     // Function
     'function-disallowed-list': null, // Specify a list of disallowed functions
@@ -56,7 +57,7 @@ module.exports = {
     'selector-id-pattern': null, // Specify a pattern for id selectors.
     'selector-max-attribute': 2, // Limit the number of attribute selectors in a selector.
     'selector-max-class': null, // Limit the number of classes in a selector. (covered by selector-max-specificity)
-    'selector-max-combinators': 3, // Limit the number of combinators in a selector.
+    'selector-max-combinators': 2, // Limit the number of combinators in a selector.
     'selector-max-compound-selectors': 3, // Limit the number of compound selectors in a selector.
     'selector-max-empty-lines': 0, // Limit the number of adjacent empty lines within selectors.
     'selector-max-id': null, // Limit the number of id selectors in a selector. (covered by selector-max-specificity)
@@ -89,9 +90,11 @@ module.exports = {
 
     // Comment
     'comment-word-disallowed-list': ["/^TODO/", { "severity": "warning" }], // Specify a list of disallowed words within comments.
-    'comment-pattern': '^[a-z].*$', // Specify a pattern for comments.
+    'comment-pattern': null, // Specify a pattern for comments.
 
     // General / Sheet
     'linebreaks': null, // Specify unix or windows linebreaks.
     'max-nesting-depth': [2, {ignore: ['blockless-at-rules', 'pseudo-classes']}], // Limit the depth of nesting.
+    'alpha-value-notation': null, // Specify percentage or number notation for alpha-values.
+    'hue-degree-notation': "angle", // Specify number or angle notation for degree hues.
 }

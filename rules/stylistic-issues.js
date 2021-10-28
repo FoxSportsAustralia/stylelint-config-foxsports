@@ -65,7 +65,7 @@ module.exports = {
     'declaration-block-semicolon-newline-before': null, // Require a newline or disallow whitespace before the semicolons of declaration blocks.
     'declaration-block-semicolon-space-after': null, // Require a single space or disallow whitespace after the semicolons of declaration blocks.
     'declaration-block-semicolon-space-before': "never", // Require a single space or disallow whitespace before the semicolons of declaration blocks.
-    'declaration-block-trailing-semicolon': ["always", {except: 'single-declaration'}], // Require or disallow a trailing semicolon within declaration blocks.
+    'declaration-block-trailing-semicolon': "always", // Require or disallow a trailing semicolon within declaration blocks.
 
     // Block
     'block-closing-brace-empty-line-before': "never", // Require or disallow an empty line before the closing brace of blocks.
@@ -136,5 +136,5 @@ module.exports = {
     'no-eol-whitespace': true, // Disallow end-of-line whitespace.
     'no-missing-end-of-source-newline': true, // Disallow missing end-of-source newlines (Autofixable).
     'no-irregular-whitespace': true, // Disallow irregular whitespaces.
-    'no-invalid-position-at-import-rule': true, // Disallow invalid position @import rules within styleshit
+    'no-invalid-position-at-import-rule': true, // Disallow invalid position @import rules within stylesheet
 }
