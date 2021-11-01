@@ -14,8 +14,8 @@ module.exports = {
       "stylelint-declaration-block-no-ignored-properties",
       "stylelint-declaration-strict-value",
       "stylelint-order",
-      "stylelint-selector-bem-pattern",
-      "stylelint-scss", // TODO: review & configure this
+      "stylelint-selector-bem-pattern"
+    //   "stylelint-scss", // TODO: review & configure this
     ],
     "rules": Object.assign(
         {
