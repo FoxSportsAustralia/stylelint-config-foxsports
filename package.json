@@ -25,6 +25,8 @@
     "stylelint": "^14.0.1"
   },
   "dependencies": {
+    "postcss": "^8.3.11",
+    "postcss-scss": "^4.0.2",
     "stylelint": "^14.0.1",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.4.0",
