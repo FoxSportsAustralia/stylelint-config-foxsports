@@ -6,16 +6,16 @@
 // So if we want our explicit definitions to extend the default, we do this:
 const strictValueDefaults = ['inherit', 'initial', 'unset'];
 
-// See https://stylelint.io/user-guide/example-config/
+// See https://stylelint.io/user-guide/configure
 module.exports = {
-    "customSyntax": "sass",
+    "customSyntax": "scss",
     "plugins": [
       "stylelint-csstree-validator",
       "stylelint-declaration-block-no-ignored-properties",
       "stylelint-declaration-strict-value",
       "stylelint-order",
-      "stylelint-selector-bem-pattern"
-      // "stylelint-scss" // TODO: review & configure this
+      "stylelint-selector-bem-pattern",
+      "stylelint-scss", // TODO: review & configure this
     ],
     "rules": Object.assign(
         {
