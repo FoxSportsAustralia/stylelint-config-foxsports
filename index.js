@@ -47,7 +47,7 @@ module.exports = {
         require('./rules/possible-errors.js'),
         require('./rules/stylistic-issues.js')
     ),
-    "reportDescriptionlessDisables": true,
+    "reportDescriptionlessDisables": false,
     "reportNeedlessDisables": true,
     "reportInvalidScopeDisables": true,
     "ignoreDisables": false,
