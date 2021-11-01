@@ -25,6 +25,7 @@
     "stylelint": "^14.0.1"
   },
   "dependencies": {
+    "sass": "^1.43.4",
     "stylelint": "^14.0.1",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.4.0",
