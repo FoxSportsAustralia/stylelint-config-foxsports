@@ -39,7 +39,7 @@ module.exports = {
     // Selector
     'selector-pseudo-class-no-unknown': true, // Disallow unknown pseudo-class selectors.
     'selector-pseudo-element-no-unknown': true, // Disallow unknown pseudo-element selectors.
-    'selector-type-no-unknown': [true, {ignoreTypes: ["/^-styled-mixin/"]}], // Disallow unknown type selectors.
+    'selector-type-no-unknown': true, // Disallow unknown type selectors.
 
     // Media feature
     'media-feature-name-no-unknown': true, // Disallow unknown media feature names.

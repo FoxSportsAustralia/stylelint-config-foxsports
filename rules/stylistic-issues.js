@@ -100,7 +100,7 @@ module.exports = {
     'selector-disallowed-list': null, // specify a list of disallowed selectors
 
     // Rule
-    'rule-empty-line-before': ['always', {except: ['first-nested'], ignore: ['after-comment']}], // Require or disallow an empty line before rules (Autofixable).
+    'rule-empty-line-before': ['always', {except: ['first-nested', 'inside-block-and-after-rule'], ignore: ['after-comment']}], // Require or disallow an empty line before rules (Autofixable).
 
     // Media feature
     'media-feature-colon-space-after': "always", // Require a single space or disallow whitespace after the colon in media features.
