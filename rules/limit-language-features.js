@@ -95,6 +95,6 @@ module.exports = {
     // General / Sheet
     'linebreaks': null, // Specify unix or windows linebreaks.
     'max-nesting-depth': [2, {ignore: ['blockless-at-rules', 'pseudo-classes']}], // Limit the depth of nesting.
-    'alpha-value-notation': number, // Specify percentage or number notation for alpha-values.
+    'alpha-value-notation': "number", // Specify percentage or number notation for alpha-values.
     'hue-degree-notation': "angle", // Specify number or angle notation for degree hues.
 }
