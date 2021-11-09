@@ -22,12 +22,12 @@
     "fs-default-project-config": "^6.1.2"
   },
   "peerDependencies": {
+    "postcss": "^8.3.11",
     "stylelint": "^14.0.1"
   },
   "dependencies": {
     "postcss": "^8.3.11",
     "postcss-scss": "^4.0.2",
-    "postcss-styled": "^0.34.0",
     "stylelint": "^14.0.1",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.4.0",
