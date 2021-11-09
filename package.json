@@ -22,7 +22,7 @@
     "fs-default-project-config": "^6.1.2"
   },
   "peerDependencies": {
-    "postcss": "^8.3.11",
+    "postcss-scss": "^4.0.2",
     "stylelint": "^14.0.1"
   },
   "dependencies": {
