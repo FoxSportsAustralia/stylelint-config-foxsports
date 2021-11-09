@@ -8,6 +8,7 @@ const strictValueDefaults = ['inherit', 'initial', 'unset'];
 
 // See https://stylelint.io/user-guide/configure
 module.exports = {
+    "customSyntax": "postcss-styled",
     "plugins": [
       "stylelint-csstree-validator",
       "stylelint-declaration-block-no-ignored-properties",
