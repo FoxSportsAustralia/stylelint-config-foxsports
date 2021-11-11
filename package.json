@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "postcss": "^8.1.0",
-    "postcss-syntax": "^0.36.2",
     "@stylelint/postcss-css-in-js": "^0.37.2",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.4.0",
