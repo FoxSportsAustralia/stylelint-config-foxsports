@@ -52,12 +52,5 @@ module.exports = {
     "reportInvalidScopeDisables": true,
     "ignoreDisables": false,
     "ignoreFiles": [],
-    "overrides": [
-        {
-            "files": ["docs/assets/*.css"],
-            "rules": {
-                'color-no-hex': false, // Disallow hex colors.
-            }
-        }
-    ]
+    "overrides": []
 }
