@@ -6,16 +6,16 @@
 // So if we want our explicit definitions to extend the default, we do this:
 const strictValueDefaults = ['inherit', 'initial', 'unset'];
 
-// See https://stylelint.io/user-guide/example-config/
+// See https://stylelint.io/user-guide/configure
 module.exports = {
-    "syntax": "scss",
+    "customSyntax": "postcss-scss",
     "plugins": [
       "stylelint-csstree-validator",
       "stylelint-declaration-block-no-ignored-properties",
       "stylelint-declaration-strict-value",
       "stylelint-order",
       "stylelint-selector-bem-pattern"
-      // "stylelint-scss" // TODO: review & configure this
+    //   "stylelint-scss", // TODO: review & configure this
     ],
     "rules": Object.assign(
         {
@@ -46,5 +46,11 @@ module.exports = {
         require('./rules/limit-language-features.js'),
         require('./rules/possible-errors.js'),
         require('./rules/stylistic-issues.js')
-    )
+    ),
+    "reportDescriptionlessDisables": false,
+    "reportNeedlessDisables": true,
+    "reportInvalidScopeDisables": true,
+    "ignoreDisables": false,
+    "ignoreFiles": [],
+    "overrides": []
 }

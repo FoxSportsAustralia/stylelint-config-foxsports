@@ -4,13 +4,14 @@ module.exports = {
     // Color
     'color-named': "never", // Require (where possible) or disallow named colors.
     'color-no-hex': null, // Disallow hex colors.
+    'color-function-notation': "legacy", // Specify modern or legacy notation for applicable color-functions.
 
     // Function
-    'function-blacklist': null, // Specify a blacklist of disallowed functions.
+    'function-disallowed-list': null, // Specify a list of disallowed functions
     'function-url-no-scheme-relative': true, // Disallow scheme-relative urls.
-    'function-url-scheme-blacklist': ["ftp", "/^http/"], // Specify a blacklist of disallowed url schemes.
-    'function-url-scheme-whitelist': null, // Specify a whitelist of allowed url schemes.
-    'function-whitelist': null, // Specify a whitelist of allowed functions.
+    'function-url-scheme-disallowed-list': ["ftp", "/^http/"], // Specify a list of disallowed URL schemes.
+    'function-url-scheme-allowed-list': null, // Specify a list of allowed URL schemes.
+    'function-allowed-list': null, // Specify a list of allowed functions.
 
     // animations/keyframes
     'keyframes-name-pattern': null, // Specify a pattern for keyframe names.
@@ -19,11 +20,11 @@ module.exports = {
     'number-max-precision': 2, // Limit the number of decimal places allowed in numbers.
 
     // Time
-    'time-min-milliseconds': 100, // Specify the minimum number of milliseconds for time values.
+    'time-min-milliseconds': [100, {ignore: ["delay"]}], // Specify the minimum number of milliseconds for time values.
 
     // Unit
-    'unit-blacklist': null, // Specify a blacklist of disallowed units.
-    'unit-whitelist': null, // Specify a whitelist of allowed units.
+    'unit-disallowed-list': null, // Specify a list of disallowed units.
+    'unit-allowed-list': null, // Specify a list of allowed units.
 
     // Value
     'value-no-vendor-prefix': true, // Disallow vendor prefixes for values.
@@ -32,26 +33,27 @@ module.exports = {
     'custom-property-pattern': "fs-.+", // Specify a pattern for custom properties.
 
     // Property
-    'property-blacklist': null, // Specify a blacklist of disallowed properties.
+    'property-disallowed-list': null, // Specify a list of disallowed properties.
     'property-no-vendor-prefix': true, // Disallow vendor prefixes for properties.
-    'property-whitelist': null, // Specify a whitelist of allowed properties.
+    'property-allowed-list': null, // Specify a list of allowed properties.
 
     // Declaration
     'declaration-no-important': true, // Disallow !important within declarations.
-    'declaration-property-unit-blacklist': null, // Specify a blacklist of disallowed property and unit pairs within declarations.
-    'declaration-property-unit-whitelist': null, // Specify a whitelist of allowed property and unit pairs within declarations.
-    'declaration-property-value-blacklist': null, // Specify a blacklist of disallowed property and value pairs within declarations.
-    'declaration-property-value-whitelist': null, // Specify a whitelist of allowed property and value pairs within declarations.
+    'declaration-property-unit-disallowed-list': null, // Specify a list of disallowed property and unit pairs within declarations.
+    'declaration-property-unit-allowed-list': null, // Specify a list of allowed property and unit pairs within declarations.
+    'declaration-property-value-disallowed-list': null, // Specify a list of disallowed property and value pairs within declarations.
+    'declaration-property-value-allowed-list': null, // Specify a list of allowed property and value pairs within declarations.
 
     // Declaration block
     'declaration-block-single-line-max-declarations': null, // Limit the number of declaration within single line declaration blocks.
 
     // Selector
-    'selector-attribute-operator-blacklist': null, // Specify a blacklist of disallowed attribute operators.
-    'selector-attribute-operator-whitelist': null, // Specify a whitelist of allowed attribute operators.
+    'selector-attribute-operator-disallowed-list': null, // Specify a list of disallowed attribute operators.
+    'selector-attribute-operator-allowed-list': null, // Specify a list of allowed attribute operators.
+    'selector-attribute-name-disallowed-list': null, // Specify a list of disallowed attribute names.
     'selector-class-pattern': null, // Specify a pattern for class selectors.
-    'selector-combinator-blacklist': null, // Specify a blacklist of disallowed combinators
-    'selector-combinator-whitelist': null, // Specify a whitelist of allowed combinators
+    'selector-combinator-disallowed-list': null, // Specify a list of disallowed combinators.
+    'selector-combinator-allowed-list': null, // Specify a list of allowed combinators.
     'selector-id-pattern': null, // Specify a pattern for id selectors.
     'selector-max-attribute': 2, // Limit the number of attribute selectors in a selector.
     'selector-max-class': null, // Limit the number of classes in a selector. (covered by selector-max-specificity)
@@ -66,30 +68,33 @@ module.exports = {
     'selector-nested-pattern': null, // Specify a pattern for the selectors of rules nested within rules.
     'selector-no-qualifying-type': [true, { ignore: ["attribute"] }], // Disallow qualifying a selector by type.
     'selector-no-vendor-prefix': true, // Disallow vendor prefixes for selectors.
-    'selector-pseudo-class-blacklist': null, // Specify a blacklist of disallowed pseudo-class selectors.
-    'selector-pseudo-class-whitelist': null, // Specify a whitelist of allowed pseudo-class selectors.
-    'selector-pseudo-element-blacklist': null, // Specify a blacklist of disallowed pseudo-element selectors
-    'selector-pseudo-element-whitelist': null, // Specify a whitelist of allowed pseudo-element selectors
+    'selector-pseudo-class-disallowed-list': null, // Specify a list of disallowed pseudo-class selectors.
+    'selector-pseudo-class-allowed-list': null, // Specify a list of allowed pseudo-class selectors.
+    'selector-pseudo-element-disallowed-list': null, // Specify a list of disallowed pseudo-element selectors.
+    'selector-pseudo-element-allowed-list': null, // Specify a list of allowed pseudo-element selectors.
 
     // Media feature
-    'media-feature-name-blacklist': null, // Specify a blacklist of disallowed media feature names.
+    'media-feature-name-disallowed-list': null, // Specify a list of disallowed media feature names.
     'media-feature-name-no-vendor-prefix': true, // Disallow vendor prefixes for media feature names.
-    'media-feature-name-value-whitelist': null, // Specify a whitelist of allowed media feature name and value pairs.
-    'media-feature-name-whitelist': null, // Specify a whitelist of allowed media feature names.
+    'media-feature-name-value-allowed-list': null, // Specify a list of allowed media feature name and value pairs.
+    'media-feature-name-allowed-list': null, // Specify a list of allowed media feature names.
 
     // Custom media
     'custom-media-pattern': "fs-.+", // Specify a pattern for custom media query names.
 
     // At-rule
-    'at-rule-blacklist': null, // Specify a blacklist of disallowed at-rules.
+    'at-rule-disallowed-list': null, // Specify a list of disallowed at-rules.
     'at-rule-no-vendor-prefix': true, // Disallow vendor prefixes for at-rules.
-    'at-rule-property-requirelist': {}, // Specify a requirelist of properties for an at-rule.
-    'at-rule-whitelist': null, // Specify a whitelist of allowed at-rules.
+    'at-rule-property-required-list': {}, // Specify a list of required properties for an at-rule.
+    'at-rule-allowed-list': null, // Specify a list of allowed at-rules.
 
     // Comment
-    'comment-word-blacklist': ["/^TODO/", { "severity": "warning" }], // Specify a blacklist of disallowed words within comments.
+    'comment-word-disallowed-list': ["/^TODO/", { "severity": "warning" }], // Specify a list of disallowed words within comments.
+    'comment-pattern': null, // Specify a pattern for comments.
 
     // General / Sheet
     'linebreaks': null, // Specify unix or windows linebreaks.
     'max-nesting-depth': [2, {ignore: ['blockless-at-rules', 'pseudo-classes']}], // Limit the depth of nesting.
+    'alpha-value-notation': "number", // Specify percentage or number notation for alpha-values.
+    'hue-degree-notation': "angle", // Specify number or angle notation for degree hues.
 }
