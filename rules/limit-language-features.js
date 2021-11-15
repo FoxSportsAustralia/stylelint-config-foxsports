@@ -3,7 +3,7 @@
 module.exports = {
     // Color
     'color-named': "never", // Require (where possible) or disallow named colors.
-    'color-no-hex': null, // Disallow hex colors.
+    'color-no-hex': true, // Disallow hex colors.
     'color-function-notation': "legacy", // Specify modern or legacy notation for applicable color-functions.
 
     // Function
